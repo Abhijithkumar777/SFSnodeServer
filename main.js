@@ -117,8 +117,12 @@ return reult;
           fs.writeFileSync("./images/" + fileName, imageBuffer, 'utf8')
           return 1;      
       }
+	  
     
       app.post('/upload/image', uploadImage);
+      app.get('/', function (req, res) {
+        res.send('Hello World!');
+      });
 
   
  //listBuckets();
